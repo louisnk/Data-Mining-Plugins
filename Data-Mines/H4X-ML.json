@@ -1,0 +1,650 @@
+{
+  "type": "Data Mine",
+  "name": "H4X-ML",
+  "config": "{\"codeName\":\"H4X-ML\"}",
+  "project": "H4X",
+  "sensorBots": [],
+  "apiDataFetcherBots": [],
+  "indicatorBots": [
+    {
+      "type": "Indicator Bot",
+      "name": "Regime-Detector",
+      "config": "{\n  \"codeName\": \"Regime-Detector\"\n}",
+      "project": "H4X",
+      "processes": [
+        {
+          "type": "Process Definition",
+          "name": "Multi-Time-Frame-Market",
+          "config": "{\n  \"codeName\": \"Multi-Time-Frame-Market\",\n  \"description\": \"ML-based market regime detection across multiple timeframes\",\n  \"deadWaitTime\": 0,\n  \"normalWaitTime\": 0,\n  \"retryWaitTime\": 10000,\n  \"botModule\": \"Regime Detector Multi Time Frame Market\"\n}",
+          "project": "H4X",
+          "id": "5b95e50f-49cb-5a36-9167-67e240442a93",
+          "savedPayload": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "targetPosition": {
+              "x": 0,
+              "y": 0
+            },
+            "floatingObject": {
+              "isPinned": false,
+              "isFrozen": false,
+              "isCollapsed": false,
+              "angleToParent": 3,
+              "distanceToParent": 2,
+              "arrangementStyle": 0
+            },
+            "uiObject": {
+              "isRunning": false
+            }
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "Product Definition",
+          "name": "Regime",
+          "config": "{\n  \"codeName\": \"Regime\",\n  \"singularVariableName\": \"regime\",\n  \"pluralVariableName\": \"regimes\"\n}",
+          "project": "H4X",
+          "productDatasets": [
+            {
+              "type": "Dataset Definition",
+              "name": "Multi-Time-Frame-Market",
+              "config": "{\n  \"codeName\": \"Multi-Time-Frame-Market\",\n  \"type\": \"Market Files\",\n  \"validTimeFrames\": [\"24-hs\", \"12-hs\", \"08-hs\", \"06-hs\", \"04-hs\", \"03-hs\", \"02-hs\", \"01-hs\"],\n  \"filePath\": \"Project/@Project/@MineType/@Mine/@Bot/@Exchange/@BaseAsset-@QuotedAsset/Output/@Product/@Dataset/@TimeFrame\",\n  \"fileName\": \"Data.json\"\n}",
+              "project": "H4X",
+              "id": "0d331c48-779c-5885-ab31-605713c19e95",
+              "savedPayload": {
+                "position": {
+                  "x": 0,
+                  "y": 0
+                },
+                "targetPosition": {
+                  "x": 0,
+                  "y": 0
+                },
+                "floatingObject": {
+                  "isPinned": false,
+                  "isFrozen": false,
+                  "isCollapsed": false,
+                  "angleToParent": 3,
+                  "distanceToParent": 2,
+                  "arrangementStyle": 0
+                },
+                "uiObject": {
+                  "isRunning": false
+                }
+              }
+            }
+          ],
+          "record": {
+            "type": "Record Definition",
+            "name": "Regime Record",
+            "project": "H4X",
+            "properties": [
+              {
+                "type": "Record Property",
+                "name": "Begin",
+                "config": "{\n  \"codeName\": \"begin\",\n  \"isString\": false\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "End",
+                "config": "{\n  \"codeName\": \"end\",\n  \"isString\": false\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Regime",
+                "config": "{\n  \"codeName\": \"regime\",\n  \"isString\": true\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Macro Trend",
+                "config": "{\n  \"codeName\": \"macro_trend\",\n  \"isString\": true\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Local Trend",
+                "config": "{\n  \"codeName\": \"local_trend\",\n  \"isString\": true\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Trend Score",
+                "config": "{\n  \"codeName\": \"trend_score\",\n  \"isString\": false\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Trend Strength",
+                "config": "{\n  \"codeName\": \"trend_strength\",\n  \"isString\": false\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              }
+            ],
+            "savedPayload": {
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "targetPosition": {
+                "x": 0,
+                "y": 0
+              },
+              "floatingObject": {
+                "isPinned": false,
+                "isFrozen": false,
+                "isCollapsed": false,
+                "angleToParent": 3,
+                "distanceToParent": 2,
+                "arrangementStyle": 0
+              },
+              "uiObject": {
+                "isRunning": false
+              }
+            }
+          },
+          "id": "d7cbdf6a-28e6-5476-ad55-bc048a190a54",
+          "savedPayload": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "targetPosition": {
+              "x": 0,
+              "y": 0
+            },
+            "floatingObject": {
+              "isPinned": false,
+              "isFrozen": false,
+              "isCollapsed": false,
+              "angleToParent": 3,
+              "distanceToParent": 2,
+              "arrangementStyle": 0
+            },
+            "uiObject": {
+              "isRunning": false
+            }
+          }
+        }
+      ],
+      "id": "7b9aae72-cf41-58b0-97a9-e917a1d340d4",
+      "savedPayload": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "targetPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "floatingObject": {
+          "isPinned": false,
+          "isFrozen": false,
+          "isCollapsed": false,
+          "angleToParent": 3,
+          "distanceToParent": 2,
+          "arrangementStyle": 0
+        },
+        "uiObject": {
+          "isRunning": false
+        }
+      }
+    },
+    {
+      "type": "Indicator Bot",
+      "name": "ML-Signal",
+      "config": "{\n  \"codeName\": \"ML-Signal\"\n}",
+      "project": "H4X",
+      "processes": [
+        {
+          "type": "Process Definition",
+          "name": "Multi-Time-Frame-Market",
+          "config": "{\n  \"codeName\": \"Multi-Time-Frame-Market\",\n  \"description\": \"ML model predictions for trading signals\",\n  \"deadWaitTime\": 0,\n  \"normalWaitTime\": 0,\n  \"retryWaitTime\": 10000,\n  \"botModule\": \"ML Signal Multi Time Frame Market\"\n}",
+          "project": "H4X",
+          "id": "fa6443aa-e56b-5261-8249-a2bf7b8b81e9",
+          "savedPayload": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "targetPosition": {
+              "x": 0,
+              "y": 0
+            },
+            "floatingObject": {
+              "isPinned": false,
+              "isFrozen": false,
+              "isCollapsed": false,
+              "angleToParent": 3,
+              "distanceToParent": 2,
+              "arrangementStyle": 0
+            },
+            "uiObject": {
+              "isRunning": false
+            }
+          }
+        }
+      ],
+      "products": [
+        {
+          "type": "Product Definition",
+          "name": "Signal",
+          "config": "{\n  \"codeName\": \"Signal\",\n  \"singularVariableName\": \"signal\",\n  \"pluralVariableName\": \"signals\"\n}",
+          "project": "H4X",
+          "productDatasets": [
+            {
+              "type": "Dataset Definition",
+              "name": "Multi-Time-Frame-Market",
+              "config": "{\n  \"codeName\": \"Multi-Time-Frame-Market\",\n  \"type\": \"Market Files\",\n  \"validTimeFrames\": [\"24-hs\", \"12-hs\", \"08-hs\", \"06-hs\", \"04-hs\", \"03-hs\", \"02-hs\", \"01-hs\"],\n  \"filePath\": \"Project/@Project/@MineType/@Mine/@Bot/@Exchange/@BaseAsset-@QuotedAsset/Output/@Product/@Dataset/@TimeFrame\",\n  \"fileName\": \"Data.json\"\n}",
+              "project": "H4X",
+              "id": "4b5da1b0-0113-5521-bee4-cdee1da9736a",
+              "savedPayload": {
+                "position": {
+                  "x": 0,
+                  "y": 0
+                },
+                "targetPosition": {
+                  "x": 0,
+                  "y": 0
+                },
+                "floatingObject": {
+                  "isPinned": false,
+                  "isFrozen": false,
+                  "isCollapsed": false,
+                  "angleToParent": 3,
+                  "distanceToParent": 2,
+                  "arrangementStyle": 0
+                },
+                "uiObject": {
+                  "isRunning": false
+                }
+              }
+            }
+          ],
+          "record": {
+            "type": "Record Definition",
+            "name": "Signal Record",
+            "project": "H4X",
+            "properties": [
+              {
+                "type": "Record Property",
+                "name": "Begin",
+                "config": "{\n  \"codeName\": \"begin\",\n  \"isString\": false\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "End",
+                "config": "{\n  \"codeName\": \"end\",\n  \"isString\": false\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Prediction",
+                "config": "{\n  \"codeName\": \"prediction\",\n  \"isString\": true\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Confidence",
+                "config": "{\n  \"codeName\": \"confidence\",\n  \"isString\": false\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              },
+              {
+                "type": "Record Property",
+                "name": "Recommended Action",
+                "config": "{\n  \"codeName\": \"recommended_action\",\n  \"isString\": true\n}",
+                "project": "H4X",
+                "savedPayload": {
+                  "position": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "targetPosition": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "floatingObject": {
+                    "isPinned": false,
+                    "isFrozen": false,
+                    "isCollapsed": false,
+                    "angleToParent": 3,
+                    "distanceToParent": 2,
+                    "arrangementStyle": 0
+                  },
+                  "uiObject": {
+                    "isRunning": false
+                  }
+                }
+              }
+            ],
+            "savedPayload": {
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "targetPosition": {
+                "x": 0,
+                "y": 0
+              },
+              "floatingObject": {
+                "isPinned": false,
+                "isFrozen": false,
+                "isCollapsed": false,
+                "angleToParent": 3,
+                "distanceToParent": 2,
+                "arrangementStyle": 0
+              },
+              "uiObject": {
+                "isRunning": false
+              }
+            }
+          },
+          "id": "dbafb8e8-ac11-502d-83d7-7a53443ac6ee",
+          "savedPayload": {
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "targetPosition": {
+              "x": 0,
+              "y": 0
+            },
+            "floatingObject": {
+              "isPinned": false,
+              "isFrozen": false,
+              "isCollapsed": false,
+              "angleToParent": 3,
+              "distanceToParent": 2,
+              "arrangementStyle": 0
+            },
+            "uiObject": {
+              "isRunning": false
+            }
+          }
+        }
+      ],
+      "id": "d176e4b1-562f-57b2-a1b8-ae7bfdf84a7d",
+      "savedPayload": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "targetPosition": {
+          "x": 0,
+          "y": 0
+        },
+        "floatingObject": {
+          "isPinned": false,
+          "isFrozen": false,
+          "isCollapsed": false,
+          "angleToParent": 3,
+          "distanceToParent": 2,
+          "arrangementStyle": 0
+        },
+        "uiObject": {
+          "isRunning": false
+        }
+      }
+    }
+  ],
+  "studyBots": [],
+  "plotters": [],
+  "id": "1f91bb33-fbe5-5d9d-b6f2-44ef8f57ce67",
+  "savedPayload": {
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "targetPosition": {
+      "x": 0,
+      "y": 0
+    },
+    "floatingObject": {
+      "isPinned": false,
+      "isFrozen": false,
+      "isCollapsed": false,
+      "angleToParent": 3,
+      "distanceToParent": 2,
+      "arrangementStyle": 0
+    },
+    "uiObject": {
+      "isRunning": false
+    }
+  }
+}
